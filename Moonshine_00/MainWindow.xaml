@@ -1,0 +1,79 @@
+﻿<Window x:Class="Moonshine_00.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Moonshine_00"
+        mc:Ignorable="d"
+        Title="Moonlight" Height="800" Width="550">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="HowMuchAlko"
+               Content="Podaj ile litrów alkoholu już masz:"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               FontSize="30"/>
+        <TextBox x:Name="AlkoVolume"
+                 Margin="20" 
+                 Grid.Row="1" 
+                 Text="0.00"
+                 FontSize="30" 
+                 TextChanged="AlkoVolume_TextChanged"/>
+
+        <Label x:Name="HowMuchPercentAlready"
+               Content="Podaj ile % ma twój alkohol teraz:"
+               HorizontalAlignment ="Left"
+               VerticalAlignment="Center"
+               Grid.Row="2"
+               FontSize="30"/>
+        <TextBox x:Name="AlkoPercentAlready"
+                 Margin="20" 
+                 Grid.Row="3" 
+                 Text="0.00"
+                 FontSize="30" 
+                 TextChanged="AlkoPercentAlready_TextChanged"/>
+
+
+        <Label x:Name="HowMuchPercent"
+               Content="Podaj ile docelowo chcesz mieć %:"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               FontSize="30"
+               Grid.Row="4"/>
+        <TextBox x:Name="AlkoPercent"
+                 Margin="20" 
+                 Grid.Row="5" 
+                 Text="0.00"
+                 FontSize="30" 
+                 TextChanged="AlkoPercent_TextChanged"/>
+
+        <Button x:Name="Equals"
+                Content="Oblicz"
+                Margin="20"
+                Grid.Row="6"
+                Click="Equals_Click"/>
+
+        <Label x:Name="HowMuchWater"
+               Content="Tyle litrów wody potrzebujesz dolać:"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               FontSize="30"
+               Grid.Row="7"/>
+        <Label x:Name="WaterVolume"
+                 Margin="10" 
+                 Grid.Row="8" 
+                 Content="0.00"
+                 FontSize="30"/>
+
+    </Grid>
+</Window>
