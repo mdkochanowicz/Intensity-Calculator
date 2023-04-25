@@ -20,9 +20,12 @@ namespace Moonshine_00
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastNumber, result;
         public MainWindow()
         {
             InitializeComponent();
+
+            Equals.Click += Equals_Click;
         }
 
         public void AlkoVolume_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,10 +48,26 @@ namespace Moonshine_00
             string typedValuePercentAlready;
             typedValuePercentAlready = sender.ToString();
         }
-
+        
         public void Equals_Click(object sender, RoutedEventArgs e)
         {
+            double ma = double.Parse(AlkoVolume.Text);
+            double cpa = double.Parse(AlkoPercentAlready.Text);
+            double cp = double.Parse(AlkoPercent.Text);
 
+            double M = (cpa * ma) / cp - ma;
+
+
+            WaterVolume.Text = M.ToString();
         }
+        
+    }
+}
+
+public class SimpleMath
+{
+    public static double Operation(double alkoPercentAlready, double alkoVolume, double alkoPercent)
+    {
+        return (alkoPercentAlready * alkoVolume) / (alkoPercent - alkoVolume);
     }
 }

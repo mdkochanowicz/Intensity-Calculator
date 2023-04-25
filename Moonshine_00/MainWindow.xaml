@@ -43,7 +43,6 @@
                  FontSize="30" 
                  TextChanged="AlkoPercentAlready_TextChanged"/>
 
-
         <Label x:Name="HowMuchPercent"
                Content="Podaj ile docelowo chcesz mieć %:"
                HorizontalAlignment="Left"
@@ -69,10 +68,10 @@
                VerticalAlignment="Center"
                FontSize="30"
                Grid.Row="7"/>
-        <Label x:Name="WaterVolume"
+        <TextBox x:Name="WaterVolume"
                  Margin="10" 
                  Grid.Row="8" 
-                 Content="0.00"
+                 Text="0.00"
                  FontSize="30"/>
 
     </Grid>
